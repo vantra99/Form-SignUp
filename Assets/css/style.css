@@ -29,16 +29,14 @@ a {
   align-items: center;
   justify-content: center;
   width: calc(100vw - 48px);
-  min-width: 1000px;
-  height: 100vh;
   margin-left: 24px;
   margin-right: 24px;
+  height: 100vh;
+  inset: 50px 200px;
 }
 
 .form-signup {
   display: flex;
-  height: 700px;
-  width: 1000px;
   background-color: #fff;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -71,7 +69,7 @@ section {
   height: 50px;
   border: 2px solid #f3f3f3;
   border-radius: 6px;
-  color: #333;
+  color: #444;
   font-weight: 600;
   margin: 20px 0;
 }
@@ -79,6 +77,7 @@ section {
 .btn:hover {
   border: 2px solid #12b8c8;
 }
+
 .btn__icon {
   width: 25px;
   height: 25px;
@@ -185,7 +184,6 @@ svg {
 }
 
 /* Eye */
-
 .label__eye--open,
 .label__eye--close {
   position: absolute;
@@ -195,10 +193,6 @@ svg {
   height: 20px;
 }
 
-.label__eye--open svg,
-.label__eye--close svg {
-  color: #12b8c8;
-}
 .label__eye--close {
   visibility: hidden;
 }
