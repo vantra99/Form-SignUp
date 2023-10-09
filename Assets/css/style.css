@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 62.5%;
+  background: #f1f1f1;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 48px);
+  min-width: 1000px;
+  height: 100vh;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.form-signup {
+  display: flex;
+  height: 700px;
+  width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.bg-img {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+section {
+  padding: 50px;
+}
+
+.form-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 360px;
+  height: 50px;
+  border: 2px solid #f3f3f3;
+  border-radius: 6px;
+  color: #333;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.btn:hover {
+  border: 2px solid #12b8c8;
+}
+.btn__icon {
+  width: 25px;
+  height: 25px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.form-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-input {
+  width: 360px;
+  height: 40px;
+  border: 2px solid #f3f3f3;
+  border-radius: 4px;
+  padding: 0 10px;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.form-input:focus {
+  border-color: #12b8c8;
+}
+
+.form-error {
+  color: red;
+  font-size: 0.8rem;
+  padding-top: 5px;
+  padding-left: 5px;
+  visibility: hidden;
+}
+
+.form-group:has(:invalid:not(:placeholder-shown)) .form-error {
+  visibility: visible;
+}
+
+.btn-signup {
+  background: #12b8c8;
+  color: #fff;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.btn-signup:hover {
+  cursor: pointer;
+}
+
+.link-login {
+  display: block;
+  color: #12b8c8;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.link-login:hover {
+  text-decoration: underline;
+}
+
+.form:has(:invalid) .btn-signup {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form-group:focus-within .form-label {
+  color: #12b8c8;
+}
+
+/* reset */
+.btn-reset {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+}
+
+.form-group [type="email"]:not(:placeholder-shown) ~ .btn-reset {
+  visibility: visible;
+}
+
+/* Eye */
+
+.label__eye--open,
+.label__eye--close {
+  position: absolute;
+  top: 34px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.label__eye--open svg,
+.label__eye--close svg {
+  color: #12b8c8;
+}
+.label__eye--close {
+  visibility: hidden;
+}
+
+.form-group
+  [type="password"]:not(:placeholder-shown)
+  ~ label
+  .label__eye--close {
+  visibility: visible;
+}
+
+.form-group
+  [type="password"]:not(:placeholder-shown)
+  ~ label
+  .label__eye--open {
+  visibility: hidden;
+}
