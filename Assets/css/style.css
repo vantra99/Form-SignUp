@@ -28,11 +28,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(100vw - 48px);
-  margin-left: 24px;
-  margin-right: 24px;
   height: 100vh;
-  inset: 50px 200px;
+  max-width: calc(100vw - 48px);
+  margin: 0 auto;
 }
 
 .form-signup {
@@ -40,6 +38,7 @@ a {
   background-color: #fff;
   border-radius: 10px;
   font-size: 1.2rem;
+  max-width: 1000px;
 }
 
 .bg-img {
